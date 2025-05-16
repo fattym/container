@@ -1,0 +1,79 @@
+h1, h2 {
+    text-align: center;
+}
+/* Navigation Bar Styling */
+
+header {
+    font-size: 1.5rem; /* Increase the font size */
+    padding: 40px; /* Increase padding to make the header taller */
+    height: auto; /* Ensure the height adjusts dynamically */
+}
+header{
+    background-color:   transparent;
+    color: #fff;
+}
+
+
+.header-bg::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5); /* Transparent black overlay */
+        z-index: 1;
+    }
+    .header-bg {
+        position: relative;
+        
+    background-image: url('./assets/con\ 2.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+header > .collapsible-header{
+    display: flex;
+    gap: 1rem;
+    width: 100%;
+    background-color: inherit;
+    place-content: center;
+    overflow: hidden;
+    transition: width 0.3s ease;
+}
+
+.animated-collapse{
+    transition: width 0.3s ease;
+}
+
+.header-links {
+    display: flex;
+    position: relative;
+    align-items: center;
+    min-width: fit-content;
+    border-radius: 25px;
+    padding: 5px 10px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.header-links:after {    
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 2px;
+    left: 50%;
+    position: absolute;
+    background: var(--header-underline);
+    transition: width 0.6s ease 0s, left 0.6s ease 0s;
+    width: 0;
+  }
+
+.header-links:hover:after {
+    width: 100%; 
+    left: 0; 
+}
+
+.header-white-bg{
+    color: #000;
+}

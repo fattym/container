@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shipping Container Details</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    animation: {
+                        fadeIn: 'fadeIn 1s ease-in-out',
+                        slideIn: 'slideIn 0.5s ease-in-out',
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            '0%': { opacity: '0' },
+                            '100%': { opacity: '1' },
+                        },
+                        slideIn: {
+                            '0%': { transform: 'translateY(-100%)' },
+                            '100%': { transform: 'translateY(0)' },
+                        },
+                    },
+                },
+            },
+        };
+    </script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-100 text-gray-800">
+    <!-- Navigation -->
+    <nav class="bg-blue-800 text-white sticky top-0 z-50 shadow-md animate-slideIn">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <h1 class="text-xl font-bold">Shipping Containers</h1>
+            
+            <!-- Desktop Navigation -->
+            <div class="hidden md:block">
+                <ul class="flex space-x-6">
+                    <li><a href="#about" class="hover:text-yellow-400 transition-colors duration-200">About</a></li>
+                    <li><a href="#services" class="hover:text-yellow-400 transition-colors duration-200">Services</a></li>
+                    <li><a href="#40-foot" class="hover:text-yellow-400 transition-colors duration-200">40-Foot Containers</a></li>
+                    <li><a href="#20-foot" class="hover:text-yellow-400 transition-colors duration-200">20-Foot Containers</a></li>
+                    <li><a href="#fill-form" class="hover:text-yellow-400 transition-colors duration-200">Contact</a></li>
+                </ul>
+            </div>
+
+            <!-- Mobile Navigation -->
+            <div class="md:hidden">
+                <button class="p-2 rounded-md hover:bg-blue-700 transition-colors duration-200" 
+                        onclick="toggleMobileMenu()">
+                    <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" 
+                         stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                        <path stroke="none" d="M0 0h24v24H0z"/>
+                        <line x1="4" y1="6" x2="20" y2="6"/>
+                        <line x1="4" y1="12" x2="20" y2="12"/>
+                        <line x1="4" y1="18" x2="20" y2="18"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-blue-800 text-white absolute top-full left-0 w-full shadow-lg animate-fadeIn">
+            <ul class="flex flex-col space-y-4 px-4 py-6">
+                <li><a href="#about" class="hover:text-yellow-400 transition-colors duration-200">About</a></li>
+                <li><a href="#services" class="hover:text-yellow-400 transition-colors duration-200">Services</a></li>
+                <li><a href="#40-foot" class="hover:text-yellow-400 transition-colors duration-200">40-Foot Containers</a></li>
+                <li><a href="#20-foot" class="hover:text-yellow-400 transition-colors duration-200">20-Foot Containers</a></li>
+                <li><a href="#fill-form" class="hover:text-yellow-400 transition-colors duration-200">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    
+    <header class="header-bg bg-blue-600 text-white py-16 text-center animate-fadeIn">
+        <h1 class="text-4xl font-bold">Shipping Container Solutions</h1>
+        <p class="mt-4 text-lg">Reliable and cost-effective container solutions tailored to your needs.</p>
+    </header>
+    
+    
+
+    <!-- About Section -->
+    <section id="about" class="container mx-auto px-4 py-12 animate-fadeIn">
+        <div class="bg-white rounded-lg shadow-lg p-6">
+            <h2 class="text-2xl font-bold text-blue-800">About Us</h2>
+            <p class="mt-4 text-center">
+                We are a leading provider of shipping container solutions, offering high-quality containers for sale, lease, and conversion.
+                Our mission is to deliver reliable and cost-effective solutions tailored to your needs.
+            </p>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="container mx-auto px-4 py-12 animate-fadeIn">
+        <div class="bg-white rounded-lg shadow-lg p-6">
+            <h2 class="text-2xl font-bold text-blue-800">Our Services</h2>
+            <ul class="mt-4 list-disc list-inside">
+                <li>Container Sales: High-quality 20-foot and 40-foot containers.</li>
+                <li>Container Leasing: Flexible leasing options for short-term projects.</li>
+                <li>Container Conversion: Custom modifications for offices, homes, and shops.</li>
+                <li>Transportation: Reliable delivery to your desired location.</li>
+            </ul>
+        </div>
+    </section>
+        <!-- 40-Foot Containers Section -->
+        <section id="40-foot" class="container mx-auto px-4 py-12 fadeInUp" >
+            <div class="bg-white rounded-lg shadow-lg p-6">
+                <h2 class="text-2xl font-bold text-blue-800">40-Foot Containers</h2>
+                <p class="mt-4">
+                    The 40-foot container is ideal for transporting large quantities of goods. It has a length of 40 feet, a width of 8 feet, and a height of 8.5 feet.
+                </p>
+                <ul class="mt-4 list-disc list-inside text-left inline-block">
+                    <li>External Dimensions: 40' x 8' x 8.5'</li>
+                    <li>Internal Volume: Approximately 67 cubic meters</li>
+                    <li>Maximum Payload: Around 28,800 kg</li>
+                </ul>
+            </div>
+        </section>
+    
+    <!-- 20-Foot Containers Section -->
+    <section id="20-foot" class="container mx-auto px-4 py-12  fadeIn">
+        <div class="bg-white rounded-lg shadow-lg p-6">
+            <h2 class="text-2xl font-bold text-blue-800">20-Foot Containers</h2>
+            <p class="mt-4">
+                The 20-foot container is perfect for smaller shipments and heavy goods. It has a length of 20 feet, a width of 8 feet, and a height of 8.5 feet.
+            </p>
+            <ul class="mt-4 list-disc list-inside text-left inline-block">
+                <li>External Dimensions: 20' x 8' x 8.5'</li>
+                <li>Internal Volume: Approximately 33 cubic meters</li>
+                <li>Maximum Payload: Around 28,200 kg</li>
+            </ul>
+        </div>
+    </section>
+    <!-- Contact Form -->
+    <section id="fill-form" class="container mx-auto px-4 py-12  animate-fadeIn">
+        <div class="bg-white rounded-lg shadow-lg p-6">
+            <h2 class="text-2xl font-bold text-blue-800">Contact Us</h2>
+            <form action="mailto:your-email@example.com" method="post" enctype="text/plain" class="mt-6 space-y-4">
+                <div>
+                    <label for="fullName" class="block font-bold">Full Name:</label>
+                    <input type="text" id="fullName" name="fullName" required class="w-full border border-gray-300 rounded-lg p-2">
+                </div>
+                <div>
+                    <label for="email" class="block font-bold">Email:</label>
+                    <input type="email" id="email" name="email" required class="w-full border border-gray-300 rounded-lg p-2">
+                </div>
+                <div>
+                    <label for="phone" class="block font-bold">Phone Number:</label>
+                    <input type="tel" id="phone" name="phone" required class="w-full border border-gray-300 rounded-lg p-2">
+                </div>
+                <div>
+                    <label for="location" class="block font-bold">Location:</label>
+                    <input type="text" id="location" name="location" required class="w-full border border-gray-300 rounded-lg p-2">
+                </div>
+                <div>
+                    <label for="type" class="block font-bold">Type:</label>
+                    <input type="text" id="type" name="type" required class="w-full border border-gray-300 rounded-lg p-2">
+                </div>
+                <div>
+                    <label for="price" class="block font-bold">Price:</label>
+                    <input type="number" id="price" name="price" required class="w-full border border-gray-300 rounded-lg p-2">
+                </div>
+                <div>
+                    <label for="quantity" class="block font-bold">Quantity:</label>
+                    <input type="number" id="quantity" name="quantity" required class="w-full border border-gray-300 rounded-lg p-2">
+                </div>
+                <div>
+                    <label for="amount" class="block font-bold">Amount:</label>
+                    <input type="number" id="amount" name="amount" required class="w-full border border-gray-300 rounded-lg p-2">
+                </div>
+                <div>
+                    <label class="block font-bold">Would you like it to be delivered?</label>
+                    <div class="flex justify-center space-x-4">
+                        <label><input type="radio" id="deliveryYes" name="delivery" value="yes" required> Yes</label>
+                        <label><input type="radio" id="deliveryNo" name="delivery" value="no" required> No</label>
+                    </div>
+                </div>
+                <div id="deliveryDetails" style="display: none;">
+                    <label for="details" class="block font-bold">Give Details:</label>
+                    <textarea id="details" name="details" rows="4" class="w-full border border-gray-300 rounded-lg p-2"></textarea>
+                </div>
+                <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700">Submit Form</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-blue-800 text-white py-6 animate-fadeIn">
+        <div class="container mx-auto px-4 text-center">
+            <p>&copy; 2025 Shipping Containers. All rights reserved.</p>
+            <p>Contact us: <a href="mailto:your-email@example.com" class="underline">your-email@example.com</a></p>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMobileMenu() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        }
+    </script>
+</body>
+</html>
