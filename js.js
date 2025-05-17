@@ -25,3 +25,16 @@ document.addEventListener('click', (e) => {
         }
     }
 });
+window.addEventListener('scroll', () => {
+    const navbar = document.querySelector('nav');
+    const navLinks = navbar.querySelectorAll('a');
+    if (window.scrollY > 50) {
+        navbar.classList.add('bg-opacity-50', 'backdrop-blur-md');
+        navbar.classList.remove('bg-blue-800');
+        navLinks.forEach(link => link.classList.add('text-blue-800'));
+    } else {
+        navbar.classList.remove('bg-opacity-50', 'backdrop-blur-md');
+        navbar.classList.add('bg-blue-800');
+        navLinks.forEach(link => link.classList.remove('text-blue-800'));
+    }
+});

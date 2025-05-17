@@ -63,7 +63,7 @@
 
             <!-- Mobile Navigation -->
             <div class="md:hidden">
-                <button class="p-2 rounded-md hover:bg-blue-700 transition-colors duration-200" 
+                <button class="p-2 rounded-md hover:bg-white-700 transition-colors duration-200" 
                         onclick="toggleMobileMenu()">
                     <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" 
                          stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
@@ -231,6 +231,26 @@
     </footer>
 
     <script>
+        let lastScrollTop = 0;
+        window.addEventListener('scroll', () => {
+            const navbar = document.querySelector('nav');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const navLinks = navbar.querySelectorAll('a');
+            const currentScrollTop = window.scrollY;
+
+            if (currentScrollTop > lastScrollTop) {
+            navbar.style.transform = 'translateY(-100%)';
+            mobileMenu.classList.add('hidden');
+            } else {
+            navbar.style.transform = 'translateY(0)';
+            }
+
+            navLinks.forEach(link => link.style.color = 'blue-800');
+            lastScrollTop = currentScrollTop <= 0 ? 0 : currentScrollTop;
+        });
+
+        // Ensure the menu is always sticky
+        document.querySelector('nav').classList.add('sticky', 'top-0', 'z-50');
         function toggleMobileMenu() {
             const mobileMenu = document.getElementById('mobile-menu');
             mobileMenu.classList.toggle('hidden');
